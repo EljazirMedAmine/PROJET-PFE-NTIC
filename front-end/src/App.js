@@ -12,18 +12,17 @@ import Header from './component/Header/Header';
 function App() {
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path='/ContactUs' element={<ContactUs/>}/>
-      <Route path='/HomePage' element={<Header/>}/>
-      <Route path='/Activitiespage' element={<Activitie/>}/>
-      <Route path='/signin' element={<SignIn/>}/>
-      <Route path='/signup' element={<SignUp/>}/>
-      <Route path='/RestaurantPage' element={<RestaurantPage/>}/>
-      <Route path='/Hotels' element={<Hotels/>}/>
-      <Route path='/activities/:id' element={<DetailActivities/>}/>
-    </Routes>
+      <Routes>
+        <Route path='/ContactUs' element={<ContactUs />} />
+        <Route path='/HomePage' element={<Header />} />
+        <Route path='/Activitiespage' element={<Activitie />} />
+        <Route path='/signin' element={<SignIn />} />
+        <Route path='/signup' element={<SignUp />} />
+        <Route path='/RestaurantPage/*' element={<RestaurantPage />} />
+        <Route path='/Hotels' element={<Hotels />} />
+        <Route path='/activities/:id' element={<DetailActivities />} />
+      </Routes>
     </BrowserRouter>
-
   );
 }
 
