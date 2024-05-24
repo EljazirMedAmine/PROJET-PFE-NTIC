@@ -8,7 +8,7 @@ const RestaurantPage = () => {
 
   useEffect(() => {
     axios
-      .get("/api/restaurants")
+      .get("http://127.0.0.1:8000/api/restaurants")
       .then((response) => {
         setRestaurants(response.data);
       })

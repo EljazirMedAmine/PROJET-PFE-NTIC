@@ -79,7 +79,7 @@ const Hotels = () => {
             <h4 className="prix">{it.prix}</h4>
             <div className="bookbtn">
 
-            <input type="submit" value="book"/>
+            <button >Book</button>
             </div>
           </div>
         ))}
