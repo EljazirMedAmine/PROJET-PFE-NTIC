@@ -2,21 +2,22 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import NavBar from "../NavBar";
+import './Hotels.css'
 
 const Hotels = () => {
   const [dat, setDat] = useState([]);
 
-  const [currentDate, setCurrentDate] = useState("");
+//   const [currentDate, setCurrentDate] = useState("");
 
-  useEffect(() => {
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = String(today.getMonth() + 1).padStart(2, "0");
-    const day = String(today.getDate()).padStart(2, "0");
+//   useEffect(() => {
+//     const today = new Date();
+//     const year = today.getFullYear();
+//     const month = String(today.getMonth() + 1).padStart(2, "0");
+//     const day = String(today.getDate()).padStart(2, "0");
 
-    const formattedDate = `${year}-${month}-${day}`;
-    setCurrentDate(formattedDate);
-  }, []);
+//     const formattedDate = `${year}-${month}-${day}`;
+//     setCurrentDate(formattedDate);
+//   }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -48,14 +49,14 @@ const Hotels = () => {
     <>
       <NavBar />
       <div>
-        <div>
-          <h2>Hotels</h2>
-          {dat.length} Activites Found
+        <div className="group">
+          <h2 className="hotels">Hotels</h2>
+          <p className="activities">{dat.length} Activites Found</p>
         </div>
-        <div>
+        {/* <div className="date">
           <h3>Availabity</h3>
 
-          <form action="">
+          <form action="" >
             From :{" "}
             <input
               type="date"
@@ -67,16 +68,23 @@ const Hotels = () => {
             <br />
             To : <input type="date" name="" id="" />
           </form>
-        </div>
+        </div> */}
+        <div className="parent">
         {dat.map((it) => (
-          <div key={it.id}>
-            <img src={it.photo} alt={it.nom} />
-            <HotelRating rate={it.rate} />
-            <h2>{it.nom}</h2>
-            <p>{it.description}</p>
-            <h4>{it.prix}</h4>
+          <div key={it.id} className="child">
+            <img src={it.photo} alt={it.nom} className="img"/>
+            <h2 className="name">{it.nom}</h2><br /><br />
+            <p className="desc">{it.description}</p>
+            <HotelRating rate={it.rate} className="rating"/>
+            <h4 className="prix">{it.prix}</h4>
+            <div className="bookbtn">
+
+            <input type="submit" value="book"/>
+            </div>
           </div>
         ))}
+        </div>
+
       </div>
     </>
   );
