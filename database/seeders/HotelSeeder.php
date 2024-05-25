@@ -20,7 +20,7 @@ class HotelSeeder extends Seeder
                 'description' => '
                 Hilton Tanger Playa: A chic beachfront hotel in Tangier, Morocco, offering modern accommodations and stunning sea views, perfect for a relaxing coastal getaway.',
                 'rate'=> 4,
-                'prix' => '1000 DH',
+                'prix' => '100',
                 'localisation' => 'https://maps.app.goo.gl/EkQGNEzTCRf41Ahh9',
             ],
             [
@@ -29,7 +29,7 @@ class HotelSeeder extends Seeder
                 'description' => '
                 Ibis Tanger Playa: A modern beachfront hotel in Tangier, Morocco, offering comfortable rooms and convenient amenities for a pleasant stay near the sea. Ideal for travelers seeking affordability without sacrificing comfort.',
                 'rate'=> 3,
-                'prix' => '600 DH',
+                'prix' => '60',
                 'localisation' => 'https://maps.app.goo.gl/8KoPxb59MJMevnW78',
             ],
             [
@@ -38,7 +38,7 @@ class HotelSeeder extends Seeder
                 'description' => '
                 Movenpick Tanger City Center: A luxurious hotel in the heart of Tangier, Morocco, featuring elegant rooms, upscale amenities, and stunning views of the city and Mediterranean Sea. Ideal for both business and leisure travelers seeking a sophisticated stay in Tangier.',
                 'rate'=> 5,
-                'prix' => '1400 DH',
+                'prix' => '140',
                 'localisation' => 'https://maps.app.goo.gl/YnYbRi11wG9BkNbm7',
             ],
             [
@@ -47,7 +47,7 @@ class HotelSeeder extends Seeder
                 'description' => '
                 Farah Tanger: A stylish hotel in Tangier, Morocco, blending modern comfort with Moroccan hospitality. Conveniently located near the city center, it offers comfortable rooms, dining options, and leisure facilities for a memorable stay.',
                 'rate'=> 4,
-                'prix' => '800 DH',
+                'prix' => '80',
                 'localisation' => 'https://maps.app.goo.gl/QuMLzkAKUen8B88T6',
             ],
         ];
