@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Database\Seeders\HotelSeeder;
+use Database\Seeders\photoSeeder;
 use Database\Seeders\CinemaSeeder;
 use Database\Seeders\ActiviteSeeder;
 use Database\Seeders\RestaurantSeeder;
@@ -34,6 +35,8 @@ class DatabaseSeeder extends Seeder
             HotelSeeder::class,
             RestaurantSeeder::class,
             TypeActiviteSeeder::class,
+            photoSeeder::class,
+
         ]);
     }
 }

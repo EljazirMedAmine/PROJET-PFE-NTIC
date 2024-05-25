@@ -16,10 +16,11 @@ return new class extends Migration
         Schema::create('type_activites', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_activite')->constrained('activites')->onDelete('cascade');
-            $table->string('photo',2000)->nullable();
+            $table->string('photo', 5000)->nullable();
+            $table->integer('rating');
+            $table->string('location')->nullable();
             $table->timestamps();
         });
-
     }
 
     /**

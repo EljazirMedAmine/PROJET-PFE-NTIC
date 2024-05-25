@@ -9,6 +9,9 @@ export default function DetailActivities() {
     const [cinemas, setCinemas] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(1);
     const [hoverIndex, setHoverIndex] = useState(null);
+    const [types, setTypes] = useState([]);
+    const [photo, setPhoto] = useState([]);
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -22,6 +25,33 @@ export default function DetailActivities() {
         };
         fetchData();
     }, [id]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const typeActiviteResponse = await fetch('http://127.0.0.1:8000/api/typeActivite');
+                const typeActiviteData = await typeActiviteResponse.json();
+                setTypes(typeActiviteData);
+            } catch (error) {
+                console.error("Error fetching activity data:", error);
+            }
+        };
+        fetchData();
+    }, []);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const typeActiviteResponse = await fetch('http://127.0.0.1:8000/api/photo');
+                const typeActiviteData = await typeActiviteResponse.json();
+                setPhoto(typeActiviteData);
+            } catch (error) {
+                console.error("Error fetching activity data:", error);
+            }
+        };
+        fetchData();
+    }, []);
+
     useEffect(() => {
         fetch("http://127.0.0.1:8000/api/cinemas")
             .then((response) => response.json())
@@ -78,9 +108,6 @@ export default function DetailActivities() {
         setHoverIndex(null);
     };
 
-
-
-
     function detail() {
         if (parseInt(id) === 1) {
             return (
@@ -93,24 +120,12 @@ export default function DetailActivities() {
                             {cinemas.map((cinema, index) => (
                                 <div
                                     key={cinema.id}
-                                    className={`carousel__item ${getClassForItem(
-                                        index
-                                    )}`}
+                                    className={`carousel__item ${getClassForItem(index)}`}
                                     onMouseEnter={() => handleMouseEnter(index)}
                                     onMouseLeave={handleMouseLeave}
                                 >
                                     <img src={cinema.photo} alt={cinema.nom_cinema} />
                                     <div className="carousel__text">
-                                        {/* <h3>{cinema.nom_cinema}</h3>
-                                    <a
-                                        href={cinema.localisation}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        View Location{" "}
-                                        <i className="bx bx-link-external"></i>
-                                    </a> */}
-
                                         {hoverIndex === index && (
                                             <div className="carousel__info">
                                                 <h5>{cinema.nom_cinema}</h5>
@@ -143,19 +158,49 @@ export default function DetailActivities() {
                 </Fragment>
             );
         } else {
-            return (
-                <div>
-                    <h1>{dat.nom}</h1>
-                    <img src="" alt="" />
-                </div>
-            );
+            return types
+                .filter(type => dat.id === type.id_activite)
+                .map(type => {
+                    const typePhotos = photo.filter(it => type.id === it.id_typeactivite);
+                    const renderedPhotos = typePhotos.map((it, index) => (
+                        <div key={index} className="pic">
+
+                            <img src={it.photo_1} alt={it.id} width={168} />
+                            <img src={it.photo_2} alt={it.id} width={168} />
+                            <img src={it.photo_3} alt={it.id} width={168} />
+                            <img src={it.photo_4} alt={it.id} width={168} />
+
+                        </div>
+
+                    ));
+
+                    return (
+                        <div key={type.id}>
+                            <h1 className="name">Discover the {dat.nom} Activity</h1><br />
+                            <div className="parentdetail">
+                                <div className="imgmain">
+
+                                <img src={type.photo} alt="" width={700} /><br />
+                                </div>
+                                <div className="group_photos">
+                                    {renderedPhotos}
+                                </div>
+                            </div>
+                            <div className="desc">
+                                <h2>Description</h2>
+                                <p>{dat.description}</p>
+
+                            </div>
+                        </div>
+                    );
+                });
+
         }
     }
 
-
     return (
         <div>
-            <NavBar/>
+            <NavBar />
             {detail()}
         </div>
     );
