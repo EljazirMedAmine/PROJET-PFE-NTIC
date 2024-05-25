@@ -69,12 +69,12 @@ const Hotels = () => {
             To : <input type="date" name="" id="" />
           </form>
         </div> */}
-        <div className="parent">
+        <div className="parenthotel">
         {dat.map((it) => (
           <div key={it.id} className="child">
             <img src={it.photo} alt={it.nom} className="img"/>
-            <h2 className="name">{it.nom}</h2><br /><br />
-            <p className="desc">{it.description}</p>
+            <h2 className="name1">{it.nom}</h2><br /><br />
+            <p className="desc1">{it.description}</p>
             <HotelRating rate={it.rate} className="rating"/>
             <h4 className="prix">{it.prix}</h4>
             <div className="bookbtn">
