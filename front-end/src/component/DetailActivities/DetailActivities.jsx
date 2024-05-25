@@ -2,6 +2,8 @@ import { Fragment, useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import "./DetailActivities.css";
 import NavBar from "../NavBar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock, faPhone, faSackDollar } from "@fortawesome/free-solid-svg-icons";
 
 export default function DetailActivities() {
     const [dat, setDat] = useState({});
@@ -11,7 +13,6 @@ export default function DetailActivities() {
     const [hoverIndex, setHoverIndex] = useState(null);
     const [types, setTypes] = useState([]);
     const [photo, setPhoto] = useState([]);
-
 
     useEffect(() => {
         const fetchData = async () => {
@@ -115,7 +116,8 @@ export default function DetailActivities() {
                     <div className="parentCinemas">
                         <h1>Cinemas available</h1>
                         <p>
-                            Cinemas in Tangier feature a mix of modern multiplexes and historic theaters, showcasing both international films and Moroccan cinema.</p>
+                            Cinemas in Tangier feature a mix of modern multiplexes and historic theaters, showcasing both international films and Moroccan cinema.
+                        </p>
                         <div className="carousel">
                             {cinemas.map((cinema, index) => (
                                 <div
@@ -130,7 +132,6 @@ export default function DetailActivities() {
                                             <div className="carousel__info">
                                                 <h5>{cinema.nom_cinema}</h5>
                                                 <p>{cinema.description}</p>
-
                                                 <iframe
                                                     src={cinema.localisation}
                                                     width={700}
@@ -164,14 +165,11 @@ export default function DetailActivities() {
                     const typePhotos = photo.filter(it => type.id === it.id_typeactivite);
                     const renderedPhotos = typePhotos.map((it, index) => (
                         <div key={index} className="pic">
-
                             <img src={it.photo_1} alt={it.id} width={168} />
                             <img src={it.photo_2} alt={it.id} width={168} />
                             <img src={it.photo_3} alt={it.id} width={168} />
                             <img src={it.photo_4} alt={it.id} width={168} />
-
                         </div>
-
                     ));
 
                     return (
@@ -179,22 +177,50 @@ export default function DetailActivities() {
                             <h1 className="name">Discover the {dat.nom} Activity</h1><br />
                             <div className="parentdetail">
                                 <div className="imgmain">
-
-                                <img src={type.photo} alt="" width={700} /><br />
+                                    <img src={type.photo} alt="" width={700} /><br />
                                 </div>
                                 <div className="group_photos">
                                     {renderedPhotos}
                                 </div>
+                                <div className="descdetail">
+                                    <h2 className="de">Description</h2>
+                                    <p className="desPA">{dat.description}</p><br />
+                                    <iframe
+                                        src={type.location}
+                                        width={400}
+                                        height={450}
+                                        style={{ border: 0 }}
+                                        allowFullScreen
+                                        loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"
+                                    />
+                                </div>
                             </div>
-                            <div className="desc">
-                                <h2>Description</h2>
-                                <p>{dat.description}</p>
+                            <div className="sub">
+                                <div className="mix">
+                                    <div className="sub1">
+                                        <h5 className="phonname"><FontAwesomeIcon icon={faPhone} /> Phone number</h5>
+                                        <p className="phonenum">You can contact by this number {dat.tel}</p>
+                                    </div>
+                                    <div className="sub2">
+                                        <h5 className="phonname"><FontAwesomeIcon icon={faClock} /> Duration</h5>
+                                        <p className="phonenum">1 hour is activity time</p>
+                                    </div>
+                                    <div className="sub3">
+                                        <h5 className="phonname"><FontAwesomeIcon icon={faSackDollar} /> Price</h5>
+                                        <p className="phonenum">${dat.prix}</p>
+                                    </div>
+                                </div>
+                                <p className="wish">Wishing you an absolutely fantastic time experiencing this Activity! May every moment be filled with excitement, wonder, and pure enjoyment. Embrace the adventure, soak in the thrill, and create memories that will last a lifetime. Have a blast!</p>
+                            </div>
+
+
+                            <div className="commentaire">
 
                             </div>
                         </div>
                     );
                 });
-
         }
     }
 

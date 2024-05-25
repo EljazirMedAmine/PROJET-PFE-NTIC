@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('id_activite')->constrained('activites')->onDelete('cascade');
             $table->string('photo', 5000)->nullable();
             $table->integer('rating');
-            $table->string('location')->nullable();
+            $table->string('location',3000)->nullable();
             $table->timestamps();
         });
     }
