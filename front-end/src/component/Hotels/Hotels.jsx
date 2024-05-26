@@ -3,6 +3,7 @@ import { FaStar } from "react-icons/fa";
 import { MdPerson } from 'react-icons/md';
 import NavBar from "../NavBar";
 import './Hotels.css';
+import { Link } from "react-router-dom";
 
 const Hotels = () => {
   const [dat, setDat] = useState([]);
@@ -55,7 +56,9 @@ const Hotels = () => {
                 </div>
                 <h4 className="prix">${it.prix} / Per person <MdPerson /></h4>
                 <div className="bookbtn">
+                  <Link to={`/Hotels/${it.id}`}>
                   <button>Book</button>
+                  </Link>
                 </div>
               </div>
             </div>
