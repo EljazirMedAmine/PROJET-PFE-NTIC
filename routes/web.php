@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ActiviteController;
 use App\Http\Controllers\HotelController;
+use App\Http\Controllers\ReservationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,10 +23,13 @@ Route::get('/', function () {
 
 
 
-// Route::get('/contact', [ContactController::class, 'show'])->name('contact.show);
+Route::get('/contact', [ContactController::class, 'show'])->name('contact.show');
 
 Route::get('activities/{id}', [ActiviteController::class, 'show']);
 Route::get('hotels/{id}', [HotelController::class, 'show']);
 
+Route::get('/contactus' , [ContactController::class , 'index']);
+
+Route::get('/resrvation' , [ReservationController::class , 'show']);
 
 

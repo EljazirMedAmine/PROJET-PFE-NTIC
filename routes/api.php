@@ -5,6 +5,7 @@ use App\Http\Controllers\CinemaController;
 use App\Http\Controllers\EmplacementController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\RestaurantController;
 use App\Http\Controllers\TypeActiviteController;
 use Illuminate\Http\Request;
@@ -40,6 +41,11 @@ Route::apiResource('activites', ActiviteController::class);
 Route::apiResource('typeActivite', TypeActiviteController::class);
 
 Route::apiResource('photo', PhotoController::class);
+
+Route::apiResource('reservations', ReservationController::class);
+
+Route::apiResource('chambres', ReservationController::class);
+
 
 
 
