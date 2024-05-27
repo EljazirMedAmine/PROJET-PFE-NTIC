@@ -29,7 +29,7 @@ export default function Reservation() {
     return (
         <>
             <NavBar />
-            <div>
+            <div className='detail-hotel'>
                 <h1 className='tit'>Hotel {dat.nom}</h1>
                 <div className='group-pict'>
                     <img src={dat.photo} alt=""  width={768} height={529}/>

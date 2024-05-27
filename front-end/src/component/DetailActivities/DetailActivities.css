@@ -7,8 +7,12 @@
     flex-direction: column;
     min-height: 100vh;
     font-family: serif;
+    margin-top: 50px;
 }
 
+.maiiin{
+    margin-top: 60px;
+}
 .carousel {
     margin-top: 13rem;
     margin-left: 50%;
