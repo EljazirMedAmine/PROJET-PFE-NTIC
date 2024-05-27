@@ -47,7 +47,7 @@ const activities = {
     },
     Karting: {
         title: "Karting",
-        imagePath: `${process.env.PUBLIC_URL}/pic/pic8.jpeg`, // Temporarily use an existing image path
+        imagePath: `${process.env.PUBLIC_URL}/pic/pic8.jpeg`,
         description:
             "Karting is a thrilling motorsport using small, open-wheel go-karts on specialized tracks. It's a popular and accessible way to experience the excitement of racing, combining speed and maneuvering skills on the track.",
     },
@@ -85,15 +85,7 @@ const restaurants = [
         facilities: ["Transport Facility", "Family Plan"],
         reviews: 584,
         website: "#",
-    },
-    {
-        name: "Additional Restaurant",
-        imagePath: `${process.env.PUBLIC_URL}/pic/additional.jpg`, // Replace with actual image path
-        duration: "2 hours",
-        facilities: ["Transport Facility", "Family Plan"],
-        reviews: 584,
-        website: "#",
-    },
+    }
 ];
 
 const hotels = [
@@ -263,6 +255,16 @@ const Header = () => {
                 <button className="view-all-button">
                     View All Hotels
                 </button>
+            </div>
+            <div className="gallery-container">
+                <h2>Gallery</h2>
+                <div className="gallery-grid">
+                    {hotels.map((hotel, index) => (
+                        <div key={index} className="gallery-item">
+                            <img src={hotel.imagePath} alt={hotel.name} />
+                        </div>
+                    ))}
+                </div>
             </div>
         </>
     );
