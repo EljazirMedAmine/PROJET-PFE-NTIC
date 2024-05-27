@@ -24,7 +24,7 @@ class TypeActiviteController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**

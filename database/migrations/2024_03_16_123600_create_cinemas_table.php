@@ -15,8 +15,11 @@ return new class extends Migration
     {
         Schema::create('cinemas', function (Blueprint $table) {
             $table->id();
-            $table->string('nom_cinema')->nullable(false); 
-            $table->string('localisation')->nullable(false); 
+            $table->string('nom_cinema')->nullable(false);
+            $table->string('localisation',3000)->nullable(false);
+            $table->string('description',1000)->nullable(false);
+            $table->string('photo')->nullable(false);
+
             $table->timestamps();
         });
 

@@ -1,0 +1,168 @@
+.app-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    color: #333;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+    color: #111111;
+  }
+
+  .date-travelers-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .date-picker, .travelers {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .date-picker .card-date, .travelers {
+    margin: 0 10px;
+  }
+
+  .date-picker label, .travelers label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #000;
+  }
+
+  .date-picker input, .travelers input {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .room-options {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .room-options button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    border-radius: 14px;
+    transition: background-color 0.3s;
+  }
+
+  .room-options button:hover {
+    background-color: #e0e0e0;
+  }
+
+  .room-card {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+
+  .slick-slider {
+    width: 300px;
+  }
+
+  .slick-slide img {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .room-details {
+    padding: 15px;
+    background-color: #fefefe;
+  }
+
+  .room-details h2 {
+    color: #000;
+    font-size: 16px;
+  }
+
+  .room-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .room-details ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    color: #555;
+    font-size: 14px;
+  }
+
+  .room-details ul li svg {
+    margin-right: 10px;
+    color: #000;
+  }
+
+  .card-date {
+    border: 1px solid #000;
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    /* padding: 15px; */
+    width: 250px;
+    height: 60px;
+  }
+  .card-date .inleftcenter{
+    margin-top: 15px;
+    margin-right: 15px;
+  }
+
+
+  /* New Section Style */
+  .new-section {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .new-section h3 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .new-section p {
+    margin: 0;
+    color: #555;
+  }
+  .options-length{
+    margin-left: 280px;
+    font-size: small;
+}
+
+.mapdehotel
+{
+    position: absolute;
+    left: 60%;
+    margin-top: -500px;
+}
+
+.btnnn{
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    background: #70c1b2;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+    
+}
