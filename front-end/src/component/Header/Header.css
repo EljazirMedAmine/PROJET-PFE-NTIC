@@ -1,179 +1,179 @@
 .background-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-image: url("https://images.unsplash.com/photo-1582919534700-acf2374f10d3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1582919534700-acf2374f10d3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .background-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .centered-text {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  width: 80%;
-  max-width: none;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 80%;
+    max-width: none;
 }
 
 .centered-text h1 {
-  margin: 0;
-  color: white;
-  font-size: 4rem;
-  line-height: 1.1;
-  white-space: nowrap;
+    margin: 0;
+    color: white;
+    font-size: 4rem;
+    line-height: 1.1;
+    white-space: nowrap;
 }
 
 .centered-text p {
-  margin: 20px 0;
-  color: white;
-  font-size: 1.5rem;
-  line-height: 1.5;
+    margin: 20px 0;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.5;
 }
 
-.explore-activities {
-  text-align: center;
-  margin-top: 50px;
+.explorer-activities {
+    text-align: center;
+    margin-top: 50px;
 }
 
-.explore-activities h2 {
-  margin-bottom: 20px;
+.explorer-activities h2 {
+    margin-bottom: 20px;
 }
 
 .activity-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .activity-button {
-  padding: 10px 20px;
-  border: 1px solid #6a9ec0;
-  border-radius: 20px;
-  background: none;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+    padding: 10px 20px;
+    border: 1px solid #6a9ec0;
+    border-radius: 20px;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .activity-button.active,
 .activity-button:hover {
-  background-color: #6a9ec0;
-  color: white;
+    background-color: #6a9ec0;
+    color: white;
 }
 
 .parentActivites {
-  width: 85vw;
-  margin: auto;
-  margin-top: 2rem;
+    width: 85vw;
+    margin: auto;
+    margin-top: 2rem;
 }
 
 .parentActivites .activityItem {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .backgroundImage {
-  margin: auto;
-  background-size: cover;
-  background-position: center;
-  width: 90%;
-  height: 500px;
-  position: relative;
-  border-radius: 5px;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    width: 90%;
+    height: 500px;
+    position: relative;
+    border-radius: 5px;
 }
 
 .infoContainer {
-  width: 80%;
-  height: 200px;
-  margin: auto;
-  position: absolute;
-  bottom: 10rem;
-  text-align: center;
-  padding: 1rem;
-  border-radius: 15px;
-  background: rgba(0, 0, 0, 0.4);
-  color: white;
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    position: absolute;
+    bottom: 10rem;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
 }
 
 .infoContainer h2 {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .restaurants-list,
 .hotels-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 
 .restaurant-card,
 .hotel-card {
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 300px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: left;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
 .restaurant-card img,
 .hotel-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .restaurant-card h3,
 .hotel-card h3 {
-  margin: 15px;
-  font-size: 1.5rem;
+    margin: 15px;
+    font-size: 1.5rem;
 }
 
 .restaurant-card p,
 .hotel-card p {
-  margin: 0 15px 10px;
+    margin: 0 15px 10px;
 }
 
 .restaurant-card a,
 .hotel-card a {
-  display: block;
-  margin: 10px 15px 15px;
-  color: #337ab7;
-  text-decoration: none;
+    display: block;
+    margin: 10px 15px 15px;
+    color: #337ab7;
+    text-decoration: none;
 }
 
 .restaurant-card a:hover,
 .hotel-card a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .view-all-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #6a9ec0;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #6a9ec0;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .view-all-button:hover {
-  background-color: #527a9b;
+    background-color: #527a9b;
 }

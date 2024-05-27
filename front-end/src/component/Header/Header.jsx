@@ -95,40 +95,41 @@ const restaurants = [
         website: "#",
     },
 ];
+
 const hotels = [
     {
         name: "Hilton",
-        imagePath: `${process.env.PUBLIC_URL}/pic/hilton.png`,
-        address: "123 Main St, Tangier",
-        reviews: 450,
+        imagePath: `${process.env.PUBLIC_URL}/pic/hilton.jpg`,
+        address: "123 Main Street, Tanger",
+        reviews: 1240,
         website: "#",
     },
     {
         name: "Ibis",
-        imagePath: `${process.env.PUBLIC_URL}/pic/ibis.png`,
-        address: "456 Elm St, Tangier",
-        reviews: 300,
+        imagePath: `${process.env.PUBLIC_URL}/pic/ibis.jpg`,
+        address: "456 Elm Street, Tanger",
+        reviews: 850,
         website: "#",
     },
     {
         name: "Movenpick",
-        imagePath: `${process.env.PUBLIC_URL}/pic/movenpick.png`,
-        address: "789 Oak St, Tangier",
-        reviews: 250,
+        imagePath: `${process.env.PUBLIC_URL}/pic/movenpick.jpg`,
+        address: "789 Oak Street, Tanger",
+        reviews: 940,
         website: "#",
     },
     {
         name: "Farah",
-        imagePath: `${process.env.PUBLIC_URL}/pic/farah.png`,
-        address: "101 Pine St, Tangier",
-        reviews: 200,
+        imagePath: `${process.env.PUBLIC_URL}/pic/farah.jpg`,
+        address: "101 Pine Street, Tanger",
+        reviews: 620,
         website: "#",
     },
     {
         name: "Hilton Tanger Houara",
-        imagePath: `${process.env.PUBLIC_URL}/pic/hiltontanger.png`,
-        address: "202 Cedar St, Tangier",
-        reviews: 500,
+        imagePath: `${process.env.PUBLIC_URL}/pic/hilton-houara.jpg`,
+        address: "202 Cedar Street, Tanger",
+        reviews: 1520,
         website: "#",
     },
 ];
@@ -161,7 +162,7 @@ const Header = () => {
                     </p>
                 </div>
             </div>
-            <div className="explore-activities">
+            <div className="explorer-activities">
                 <h2>Explore Activities</h2>
                 <p>
                     "Dive into a world of endless excitement and exploration.
@@ -241,15 +242,17 @@ const Header = () => {
                 </button>
             </div>
             <div className="explore-activities">
-                <h2>Best Ranked Hotels</h2>
+                <h2>Hotels</h2>
                 <p>
-                    Discover top-rated hotels offering exceptional service and
-                    comfortable accommodations for a memorable stay.
+                    Find the best places to stay in Tangier, from luxury hotels to budget-friendly options.
                 </p>
                 <div className="hotels-list">
                     {hotels.map((hotel, index) => (
                         <div key={index} className="hotel-card">
-                            <img src={hotel.imagePath} alt={hotel.name} />
+                            <img
+                                src={hotel.imagePath}
+                                alt={hotel.name}
+                            />
                             <h3>{hotel.name}</h3>
                             <p>Address: {hotel.address}</p>
                             <p>{hotel.reviews} reviews</p>
@@ -257,6 +260,9 @@ const Header = () => {
                         </div>
                     ))}
                 </div>
+                <button className="view-all-button">
+                    View All Hotels
+                </button>
             </div>
         </>
     );
