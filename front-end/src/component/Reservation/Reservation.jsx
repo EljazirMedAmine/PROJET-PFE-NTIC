@@ -11,6 +11,7 @@ import Page from '../Page/Page';
 export default function Reservation() {
     const [dat, setDat] = useState({});
     const { idd } = useParams();
+    
 
     useEffect(() => {
         const fetchData = async () => {

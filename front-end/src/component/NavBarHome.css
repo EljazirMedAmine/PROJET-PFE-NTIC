@@ -1,4 +1,5 @@
 .header {
+<<<<<<< HEAD
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,3 +68,62 @@
   
   /* Add your other styles for the logo, navigation, and signin-button */
   
+=======
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px; /* Adjust padding as needed */
+  background-color:rgb(0, 147, 180); /* Make the background transparent */
+  position: relative; /* Ensure the header is a positioned container for absolute positioning */
+}
+
+.logo a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.logo-image {
+  width: 200px; /* Adjust this value as needed */
+  height: auto; /* Keeps the aspect ratio intact */
+}
+
+.navigation2 ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Adjust the gap between links as needed */
+}
+
+.navigation2 li {
+  padding: 5px; /* Adjust padding as needed */
+}
+
+.navigation2 a {
+  text-decoration: none;
+  color: rgb(255, 255, 255); /* Change the color as needed */
+}
+
+.navigation2 a:hover {
+  text-shadow: 0 0 10px white, 0 0 20px white; /* Glowing effect */
+  color: rgb(165, 163, 48); /* Optional: Change text color on hover */
+}
+
+.signin-button button {
+  background-color: yellow; /* Sets the background color */
+  color: black; /* Sets the text color */
+  border: none; /* Removes the default border */
+  padding: 10px 20px; /* Adds some padding around the text */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  border-radius: 5px; /* Optional: Rounds the corners of the button */
+  transition: box-shadow 0.3s ease; /* Smooth transition for the glow effect */
+  /* Add other styling as needed */
+}
+
+.signin-button button:hover {
+  box-shadow: 0 0 15px yellow; /* Glowing effect on hover */
+}
+
+/* Remove or comment out the background-image rule */
+.background-image {
+  display: none; /* Hides the background image if present */
+}
+>>>>>>> f9dfc616756ee7ed69de239c5b2f0a6512fbebdd
