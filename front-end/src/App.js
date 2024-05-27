@@ -16,7 +16,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/ContactUs' element={<ContactUs />} />
-        <Route path='/HomePage' element={<Header />} />
+        <Route path='/' element={<Header />} />
         <Route path='/Activitiespage' element={<Activitie />} />
         <Route path='/signin' element={<SignIn />} />
         <Route path='/signup' element={<SignUp />} />

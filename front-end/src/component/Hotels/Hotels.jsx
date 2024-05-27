@@ -4,6 +4,8 @@ import { MdPerson } from 'react-icons/md';
 import NavBar from "../NavBar";
 import './Hotels.css';
 import { Link } from "react-router-dom";
+import { FaIconName } from 'react-icons/fa';
+import { MdIconName } from 'react-icons/md';
 
 const Hotels = () => {
   const [dat, setDat] = useState([]);
