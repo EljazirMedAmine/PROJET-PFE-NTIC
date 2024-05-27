@@ -47,8 +47,14 @@ class HotelController extends Controller
      */
     public function show($id)
     {
-        //
-    }
+        $data = Hotel::find($id);
+
+        if (!$data) {
+            return response()->json(['message' => 'Data not found'], 404);
+        }
+
+        return response()->json($data, 200);
+}
 
     /**
      * Show the form for editing the specified resource.

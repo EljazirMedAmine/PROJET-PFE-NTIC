@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import NavBar from '../NavBar'; 
+import NavBar from '../NavBar';
 
 import './Activitie.css';
 import { Link } from 'react-router-dom';
@@ -47,7 +47,7 @@ export default function Activitie() {
                                     <div key={it.id} className="backgroundImage" style={{ backgroundImage: `url(${it.photo})` }} data-aos="fade-up">
                                         <div className="infoContainer">
                                             <h2>{item.nom}</h2>
-                                            <p>{item.description}</p>
+                                            <p>{item.description.substring(0,250)}...</p>
                                             <Link to={`/activities/${item.id}`}>
                                                 <button>{item.nom}<i className='bx bx-link-external'></i></button>
                                             </Link>

@@ -40,7 +40,7 @@ const NavBarHome = () => {
           </ul>
         </nav>
         <div className="signin-button">
-          <Link to={"signin"}>
+          <Link to={"/signin"}>
             <button>Sign In</button>
           </Link>
         </div>

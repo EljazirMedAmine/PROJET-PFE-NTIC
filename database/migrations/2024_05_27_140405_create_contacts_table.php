@@ -13,16 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('photos', function (Blueprint $table) {
+        Schema::create('contacts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_typeactivite')->constrained('type_activites')->onDelete('cascade');
-            $table->string('photo_1',3000)->nullable(false);
-            $table->string('photo_2',3000)->nullable();
-            $table->string('photo_3',3000)->nullable();
-            $table->string('photo_4',3000)->nullable();
+            $table->string('name')->nullable(false);
+            $table->string('last_name')->nullable(false);
+            $table->string('email')->nullable(false);
+            $table->string('number')->nullable();
+            $table->string('message')->nullable(false);
+
             $table->timestamps();
         });
-
     }
 
     /**
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('photos');
+        Schema::dropIfExists('contacts');
     }
 };

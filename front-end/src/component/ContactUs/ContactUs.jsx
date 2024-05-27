@@ -52,7 +52,7 @@ export default function ContactUs() {
             </fieldset>
           </form>
           <br />
-          <div className="ss">Email Us: projet@gmail.com</div>
+          <div className="ss">Email Us: Travelcation@gmail.com</div>
         </div>
       </div>
     </>

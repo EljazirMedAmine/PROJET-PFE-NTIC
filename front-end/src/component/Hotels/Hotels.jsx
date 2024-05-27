@@ -1,22 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { FaStar } from "react-icons/fa";
+import { MdPerson } from 'react-icons/md';
 import NavBar from "../NavBar";
+import './Hotels.css';
+import { Link } from "react-router-dom";
 
 const Hotels = () => {
   const [dat, setDat] = useState([]);
-
-  const [currentDate, setCurrentDate] = useState("");
-
-  useEffect(() => {
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = String(today.getMonth() + 1).padStart(2, "0");
-    const day = String(today.getDate()).padStart(2, "0");
-
-    const formattedDate = `${year}-${month}-${day}`;
-    setCurrentDate(formattedDate);
-  }, []);
+  const [currentPage, setCurrentPage] = useState(1);
+  const hotelsPerPage = 3;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,52 +23,54 @@ const Hotels = () => {
     fetchData();
   }, []);
 
-  const HotelRating = ({ rate }) => {
-    return (
-      <div>
-        {[...Array(rate)].map((_, index) => (
-          <FontAwesomeIcon
-            key={index}
-            icon={faStar}
-            style={{ color: "#FFD43B" }}
-          />
-        ))}
-      </div>
-    );
-  };
+  const indexOfLastHotel = currentPage * hotelsPerPage;
+  const indexOfFirstHotel = indexOfLastHotel - hotelsPerPage;
+  const currentHotels = dat.slice(indexOfFirstHotel, indexOfLastHotel);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  const pageNumbers = [];
+  for (let i = 1; i <= Math.ceil(dat.length / hotelsPerPage); i++) {
+    pageNumbers.push(i);
+  }
+
   return (
     <>
       <NavBar />
-      <div>
-        <div>
-          <h2>Hotels</h2>
-          {dat.length} Activites Found
+      <div className="hotels-container">
+        <div className="group">
+          <h2 className="hotels">Hotels</h2>
+          <p className="activities">{dat.length} Activities Found</p>
         </div>
-        <div>
-          <h3>Availabity</h3>
-
-          <form action="">
-            From :{" "}
-            <input
-              type="date"
-              value={currentDate}
-              name=""
-              id=""
-              onChange={(e) => setCurrentDate(e.target.value)}
-            />
-            <br />
-            To : <input type="date" name="" id="" />
-          </form>
+        <div className="parenthotel">
+          {currentHotels.map((it) => (
+            <div key={it.id} className="child">
+              <img src={it.photo} alt={it.nom} className="img" />
+              <div className="content">
+                <h2 className="name1">{it.nom}</h2>
+                <p className="desc1">{it.description}</p>
+                <div className="rating">
+                  {Array.from({ length: it.rate }).map((_, i) => (
+                    <FaStar key={i} color="#FFD700" />
+                  ))}
+                </div>
+                <h4 className="prix">${it.prix} / Per person <MdPerson /></h4>
+                <div className="bookbtn">
+                  <Link to={`/Hotels/${it.id}`}>
+                  <button>Book</button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-        {dat.map((it) => (
-          <div key={it.id}>
-            <img src={it.photo} alt={it.nom} />
-            <HotelRating rate={it.rate} />
-            <h2>{it.nom}</h2>
-            <p>{it.description}</p>
-            <h4>{it.prix}</h4>
-          </div>
-        ))}
+        <div className="pagination">
+          {pageNumbers.map(number => (
+            <button key={number} onClick={() => paginate(number)} className={number === currentPage ? 'active' : ''}>
+              {number}
+            </button>
+          ))}
+        </div>
       </div>
     </>
   );

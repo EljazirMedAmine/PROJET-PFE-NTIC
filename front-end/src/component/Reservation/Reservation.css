@@ -1,0 +1,91 @@
+.group-pict {
+    display: flex;
+    padding: 20px;
+}
+
+.pictures img {
+    padding: 3px;
+}
+
+.tow {
+    display: flex;
+
+}
+
+.tit {
+    font-size: 32px;
+    color: #333;
+    margin: 0;
+    font-family: 'Mulish';
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.btnbookk button
+{
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    background: #70c1b2;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-left: 1170px;
+}
+
+.rating1
+{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-left: 28px;
+}
+.nomm{
+    font-family: 'Mulish';
+    margin-left: 30px;
+}
+
+.group_dess{
+    margin-left: 25px;
+}
+
+.desc2{
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0 20px;
+}
+
+.equipment
+{
+    border-radius: 3px;
+    border: 1px solid rgba(22, 82, 125, 0.08);
+    background: #F8FAFC;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 10px 10px;
+    margin-left: 35px;
+    width: 500px;
+    box-sizing: border-box;
+}
+.equi1{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.mixx{
+    margin: 0 0.9px 10px 0.9px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
+    width: 440.9px;
+    box-sizing: border-box;
+}
+.titele{
+    font-family: 'Mulish';
+    padding: 15px;
+}
