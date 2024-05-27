@@ -9,7 +9,7 @@ const NavBarHome = () => {
         <div className="background-image"></div> {/* Div for background image */}
         <div className="logo">
           <Link to="/HomePage">
-            <img src="/pic/whitelogo.png" alt="Logo" className="logo-image" />
+            <img src="/pic/blacklogo.png" alt="Logo" className="logo-image" />
           </Link>
         </div>
         <nav className="navigation2">

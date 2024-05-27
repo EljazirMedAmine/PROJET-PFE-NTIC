@@ -27,7 +27,7 @@
   
   .navigation2 a {
     text-decoration: none;
-    color: rgb(255, 255, 255); /* Change the color as needed */
+    color: rgb(0, 0, 0); /* Change the color as needed */
   }
   
   .navigation2 a:hover {
