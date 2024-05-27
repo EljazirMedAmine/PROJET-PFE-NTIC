@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('chambres', function (Blueprint $table) {
             $table->id();
-            $table->integer('num');
+            $table->integer('num')->unique();
             $table->integer('nbr_lit');
-            // $table->string('')
             $table->timestamps();
         });
+
     }
 
     /**
