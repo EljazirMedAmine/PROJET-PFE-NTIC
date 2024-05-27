@@ -17,7 +17,8 @@ return new class extends Migration
     $table->id();
     $table->string('nom')->nullable(false);
     $table->string('localisation')->nullable(false);
-    $table->text('description')->nullable(); 
+    $table->string('photo')->nullable(false);
+    $table->text('description')->nullable();
     $table->timestamps();
 });
 
