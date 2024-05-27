@@ -95,44 +95,6 @@ const restaurants = [
         website: "#",
     },
 ];
-const hotels = [
-    {
-        name: "Hilton",
-        imagePath: `${process.env.PUBLIC_URL}/pic/hilton.png`,
-        address: "123 Main St, Tangier",
-        reviews: 450,
-        website: "#",
-    },
-    {
-        name: "Ibis",
-        imagePath: `${process.env.PUBLIC_URL}/pic/ibis.png`,
-        address: "456 Elm St, Tangier",
-        reviews: 300,
-        website: "#",
-    },
-    {
-        name: "Movenpick",
-        imagePath: `${process.env.PUBLIC_URL}/pic/movenpick.png`,
-        address: "789 Oak St, Tangier",
-        reviews: 250,
-        website: "#",
-    },
-    {
-        name: "Farah",
-        imagePath: `${process.env.PUBLIC_URL}/pic/farah.png`,
-        address: "101 Pine St, Tangier",
-        reviews: 200,
-        website: "#",
-    },
-    {
-        name: "Hilton Tanger Houara",
-        imagePath: `${process.env.PUBLIC_URL}/pic/hiltontanger.png`,
-        address: "202 Cedar St, Tangier",
-        reviews: 500,
-        website: "#",
-    },
-];
-
 const Header = () => {
     const [currentActivity, setCurrentActivity] = useState("Bowling");
 
@@ -239,24 +201,6 @@ const Header = () => {
                 <button className="view-all-button">
                     View All Restaurants
                 </button>
-            </div>
-            <div className="explore-activities">
-                <h2>Best Ranked Hotels</h2>
-                <p>
-                    Discover top-rated hotels offering exceptional service and
-                    comfortable accommodations for a memorable stay.
-                </p>
-                <div className="hotels-list">
-                    {hotels.map((hotel, index) => (
-                        <div key={index} className="hotel-card">
-                            <img src={hotel.imagePath} alt={hotel.name} />
-                            <h3>{hotel.name}</h3>
-                            <p>Address: {hotel.address}</p>
-                            <p>{hotel.reviews} reviews</p>
-                            <a href={hotel.website}>Website</a>
-                        </div>
-                    ))}
-                </div>
             </div>
         </>
     );

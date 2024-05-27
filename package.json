@@ -6,6 +6,7 @@
         "production": "vite build"
     },
     "dependencies": {
+        "antd": "^5.17.4",
         "axios": "^1.7.2",
         "composer": "^4.1.0",
         "react-icons": "^5.2.1",
