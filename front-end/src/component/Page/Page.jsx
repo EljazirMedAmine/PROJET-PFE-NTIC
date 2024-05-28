@@ -6,6 +6,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link, useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchChambres, fetchReservations } from '../Reducer';
 
 function Page() {
     const settings = {
@@ -17,6 +19,12 @@ function Page() {
     };
     const [dat, setDat] = useState({});
     const { idd } = useParams();
+    const dispatch = useDispatch();
+    const reservations = useSelector((state) => state.reservations); // Adjust according to your state structure
+
+    useEffect(() => {
+        dispatch(fetchReservations());
+    }, [dispatch]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -30,6 +38,15 @@ function Page() {
         };
         fetchData();
     }, [idd]);
+
+    const handleRoomSelection = (roomType) => {
+        // Dispatch action to select room
+        dispatch(fetchChambres(roomType));
+        // Optionally, you can save this selection to the backend here
+        // For example:
+        // axiosInstance.post('/api/room-selection', { roomType });
+    };
+
     return (
         <div className="app-container">
             <h1>Choisissez votre chambre</h1>
@@ -54,20 +71,15 @@ function Page() {
                         </div>
                     </div>
                 </div>
-
-
             </div>
             <div className="room-options">
-                <button>Toutes les chambres</button>
-                <button>1 lit</button>
-                <button>2 lits</button>
-                <button>3+ lits</button>
-
+                <button onClick={() => handleRoomSelection('Toutes les chambres')}>Toutes les chambres</button>
+                <button onClick={() => handleRoomSelection('1 lit')}>1 lit</button>
+                <button onClick={() => handleRoomSelection('2 lits')}>2 lits</button>
+                <button onClick={() => handleRoomSelection('3+ lits')}>3+ lits</button>
             </div>
             <div className="room-card">
                 <Slider {...settings}>
-
-
                     <div>
                         <img src={dat.chambre_1} alt="Room" />
                     </div>
@@ -77,14 +89,12 @@ function Page() {
                     <div>
                         <img src={dat.chambre_3} alt="Room" />
                     </div>
-
-
                 </Slider>
                 <div className="room-details">
                     <h2>Chambre Standard Double ou avec lits jumeaux</h2>
                     <ul>
                         <li><FontAwesomeIcon icon={faCheck} /> Aucun prépaiement nécessaire</li>
-                        {dat.id===3 ?<li><FontAwesomeIcon icon={faSpa} /> 30% de réduction sur le Spa (par jour)</li>: ""}
+                        {dat.id === 3 && dat.id === 5? <li><FontAwesomeIcon icon={faSpa} /> 30% de réduction sur le Spa (par jour)</li> : ""}
                         <li><FontAwesomeIcon icon={faCity} /> Vue sur la ville</li>
                         <li><FontAwesomeIcon icon={faUsers} /> 3 personnes</li>
                         <li><FontAwesomeIcon icon={faBed} /> 1 lit double et 1 canapé-lit (1 place) ou 2 lits 1 place et 1 canapé-lit (1 place)</li>

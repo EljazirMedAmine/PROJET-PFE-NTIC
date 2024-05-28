@@ -173,7 +173,7 @@ export default function DetailActivities() {
                     ));
 
                     return (
-                        <div key={type.id}>
+                        <div key={type.id} className="maiiin">
                             <h1 className="name">Discover the {dat.nom} Activity</h1><br />
                             <div className="parentdetail">
                                 <div className="imgmain">

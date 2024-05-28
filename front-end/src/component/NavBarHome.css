@@ -3,13 +3,20 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 50px; /* Adjust padding as needed */
-  background-color:rgb(0, 147, 180); /* Make the background transparent */
-  position: relative; /* Ensure the header is a positioned container for absolute positioning */
+  background-color: transparent; /* Make the background transparent */
+  position: absolute; /* Position the header absolutely */
+  width: 100%;
+  top: 0; /* Align it to the top */
+  z-index: 2; /* Ensure it is above the background but below any overlays */
+}
+
+.logo {
+  flex-shrink: 0; /* Prevent the logo from shrinking */
 }
 
 .logo a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0); /* Adjust text color as needed */
 }
 
 .logo-image {
@@ -17,10 +24,18 @@
   height: auto; /* Keeps the aspect ratio intact */
 }
 
+.navigation2 {
+  flex-grow: 1; /* Allow the navigation to take up available space */
+  display: flex;
+  justify-content: center; /* Center the navigation links */
+}
+
 .navigation2 ul {
   list-style: none;
   display: flex;
   gap: 20px; /* Adjust the gap between links as needed */
+  padding: 0;
+  margin: 0;
 }
 
 .navigation2 li {
@@ -29,12 +44,16 @@
 
 .navigation2 a {
   text-decoration: none;
-  color: rgb(255, 255, 255); /* Change the color as needed */
+  color: white; /* Change the color to white for better visibility on the background */
 }
 
 .navigation2 a:hover {
   text-shadow: 0 0 10px white, 0 0 20px white; /* Glowing effect */
-  color: rgb(165, 163, 48); /* Optional: Change text color on hover */
+  color: #32b7ff; /* Change text color to yellow on hover */
+}
+
+.signin-button {
+  flex-shrink: 0; /* Prevent the button from shrinking */
 }
 
 .signin-button button {
@@ -45,14 +64,12 @@
   cursor: pointer; /* Changes cursor to pointer on hover */
   border-radius: 5px; /* Optional: Rounds the corners of the button */
   transition: box-shadow 0.3s ease; /* Smooth transition for the glow effect */
-  /* Add other styling as needed */
 }
 
 .signin-button button:hover {
   box-shadow: 0 0 15px yellow; /* Glowing effect on hover */
 }
 
-/* Remove or comment out the background-image rule */
 .background-image {
   display: none; /* Hides the background image if present */
 }

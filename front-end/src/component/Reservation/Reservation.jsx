@@ -11,7 +11,7 @@ import Page from '../Page/Page';
 export default function Reservation() {
     const [dat, setDat] = useState({});
     const { idd } = useParams();
-    
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -29,7 +29,7 @@ export default function Reservation() {
     return (
         <>
             <NavBar />
-            <div>
+            <div className='detail-hotel'>
                 <h1 className='tit'>Hotel {dat.nom}</h1>
                 <div className='group-pict'>
                     <img src={dat.photo} alt=""  width={768} height={529}/>
@@ -73,7 +73,7 @@ export default function Reservation() {
                             {dat.id !== 2 ? <h5 className="phonname"><FontAwesomeIcon icon={faUtensils} /> Restaurant</h5> : ""}
                         </div>
                         <div className="equi2">
-                            {dat.id === 3 ? <h5 className="phonname"><FontAwesomeIcon icon={faSpa} /> Spa</h5> : ""}
+                            {dat.id === 3 &&  dat.id === 5 ? <h5 className="phonname"><FontAwesomeIcon icon={faSpa} /> Spa</h5> : ""}
                         </div>
                     </div>
                 </div>

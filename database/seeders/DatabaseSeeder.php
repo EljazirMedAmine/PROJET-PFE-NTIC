@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use Database\Seeders\HotelSeeder;
 use Database\Seeders\photoSeeder;
 use Database\Seeders\CinemaSeeder;
+use Database\Seeders\ChambreSeeder;
 use Database\Seeders\ActiviteSeeder;
 use Database\Seeders\RestaurantSeeder;
 use Database\Seeders\EmplacementSeeder;
@@ -36,6 +37,7 @@ class DatabaseSeeder extends Seeder
             RestaurantSeeder::class,
             TypeActiviteSeeder::class,
             photoSeeder::class,
+            ChambreSeeder::class,
 
         ]);
     }

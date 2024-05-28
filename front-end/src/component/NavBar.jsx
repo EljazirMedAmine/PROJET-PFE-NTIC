@@ -7,14 +7,14 @@ const NavBar = () => {
     <header className="header">
       <div className="background-image"></div> {/* Div for background image */}
       <div className="logo">
-        <Link to="/HomePage">
+        <Link to="/">
           <img src="/pic/blacklogo.png" alt="Logo" className="logo-image" />
         </Link>
       </div>
       <nav className="navigation">
         <ul>
           <li>
-            <Link to="/HomePage" className="active">
+            <Link to="/" className="active">
               Home
             </Link>
           </li>
@@ -31,7 +31,7 @@ const NavBar = () => {
             <Link to="/Spots">Spots</Link>
           </li>
           <li>
-            <Link to="/aboutus">About Us</Link>
+            <Link to="/About">About Us</Link>
           </li>
           <li>
             <Link to="/ContactUs">Contact Us</Link>
