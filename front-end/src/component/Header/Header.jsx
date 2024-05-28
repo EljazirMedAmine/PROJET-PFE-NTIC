@@ -3,6 +3,8 @@ import "./Header.css";
 import NavBarHome from "../NavBarHome"; // Adjust the path according to your project structure
 import Footer from "../Footer/Footer"; // Adjust the path according to your project structure
 import { Link } from "react-router-dom";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const activities = {
     Bowling: {
