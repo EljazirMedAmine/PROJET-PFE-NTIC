@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Add this import statement
+import { Link } from "react-router-dom";
 import "./NavBarHome.css"; // Import CSS file
 
 const NavBarHome = () => {
@@ -42,6 +42,11 @@ const NavBarHome = () => {
                         </li>
                     </ul>
                 </nav>
+                <div className="signin-button">
+                    <Link to="/signin">
+                        <button>Sign In</button>
+                    </Link>
+                </div>
             </header>
         </>
     );

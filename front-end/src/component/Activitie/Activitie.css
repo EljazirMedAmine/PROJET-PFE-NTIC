@@ -1,12 +1,13 @@
 .parentActivites {
     width: 85vw;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 200px;
 }
 
 
 .parentActivites h1 {
     text-align: center;
+    margin-top: 100px;
 }
 
 .parentActivites p {

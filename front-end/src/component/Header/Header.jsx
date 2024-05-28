@@ -17,7 +17,7 @@ const activities = {
         title: "Paint Ball",
         imagePath: `${process.env.PUBLIC_URL}/pic/pic4.jpeg`,
         description:
-            "Paintball, an exhilarating team sport, offers the thrill of combat simulation while strategizing with friends for the ultimate win.",
+            "Paintball, an exhilarating team sport, offers the thrill of combat simulation while strategizing with friends for the ultimate win and fun.",
     },
     "Horse Riding": {
         title: "Horse Riding",

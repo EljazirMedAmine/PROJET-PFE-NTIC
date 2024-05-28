@@ -49,7 +49,7 @@
 
 .navigation2 a:hover {
   text-shadow: 0 0 10px white, 0 0 20px white; /* Glowing effect */
-  color: #32b7ff; /* Change text color to yellow on hover */
+  color: #32b7ff; /* Change text color to blue on hover */
 }
 
 .signin-button {
