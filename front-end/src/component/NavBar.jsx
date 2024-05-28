@@ -36,13 +36,13 @@ const NavBar = () => {
           <li>
             <Link to="/ContactUs">Contact Us</Link>
           </li>
-          <li className="signin-button">
-            <Link to="/signin">
-              <button>Sign In</button>
-            </Link>
-          </li>
         </ul>
       </nav>
+      <div className="signin-button">
+        <Link to="/signin">
+          <button>Sign In</button>
+        </Link>
+      </div>
     </header>
   );
 };
