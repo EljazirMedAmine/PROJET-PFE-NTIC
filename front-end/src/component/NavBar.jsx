@@ -36,8 +36,10 @@ const NavBar = () => {
           <li>
             <Link to="/ContactUs">Contact Us</Link>
           </li>
-          <li>
-            <Link to="/signin"><button className="btn btn-success">Signin</button> </Link>
+          <li className="signin-button">
+            <Link to="/signin">
+              <button>Sign In</button>
+            </Link>
           </li>
         </ul>
       </nav>
