@@ -2,9 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px; /* Adjust padding as needed */
+  padding: 30px 50px; /* Adjusted top padding to 30px */
   position: relative; /* Ensure the header is a positioned container for absolute positioning */
 }
+
 
 .logo {
   flex-shrink: 0; /* Prevent the logo from shrinking */
@@ -45,7 +46,7 @@
 
 .navigation a:hover {
   text-shadow: 0 0 10px white, 0 0 20px white; /* Glowing effect */
-  color: rgb(165, 163, 48); /* Optional: Change text color on hover */
+  color: #00a6ff; /* Optional: Change text color on hover */
 }
 
 .signin-button {

@@ -1,0 +1,65 @@
+.about-container {
+    position: relative;
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: white; /* Set text color to white */
+    background-image: url('https://images.unsplash.com/photo-1569867037420-3fe5f84cabf0?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+  }
+  
+  .about-content {
+    padding: 100px; /* Increase padding for larger cards */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for text */
+  }
+  
+  
+  .about-title {
+    color: #00a6ff; /* Blue color for the title */
+    font-size: 3rem; /* Increase font size for the title */
+  }
+  
+  .about-description {
+    color: white; /* Set text color to white */
+    font-size: 1.5rem; /* Increase font size for the description */
+  }
+  
+  .hotel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .hotel-card {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .hotel-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .hotel-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .hotel-card h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  .home-button{
+    color: rgb(255, 238, 0);
+  }
