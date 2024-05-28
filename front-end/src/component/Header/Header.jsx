@@ -200,7 +200,7 @@ const Header = () => {
             <NavBarHome />
             <div className="background-container">
                 <div className="centered-text">
-                    <h1>We Find The Best Recommendations Tours In Tangier</h1>
+                    <h1 className="titellll">We Find The Best Recommendations Tours In Tangier</h1>
                     <br />
                     <p>
                         Welcome to our platform, your go-to destination for
@@ -319,8 +319,8 @@ const Header = () => {
                 <div className="hotel-grid">
                     {hotels.map((hotel, index) => (
                         <div key={index} className="hotel-card">
-                            <img src={hotel.imagePath} alt={hotel.name} />
-                            <h2>{hotel.name}</h2>
+                            <img src={hotel.photo} alt={hotel.nom} />
+                            <h2>{hotel.nom}</h2>
                         </div>
                     ))}
                 </div>

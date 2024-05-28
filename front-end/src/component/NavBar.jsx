@@ -36,6 +36,9 @@ const NavBar = () => {
           <li>
             <Link to="/ContactUs">Contact Us</Link>
           </li>
+          <li>
+            <Link to="/signin"><button className="btn btn-success">Signin</button> </Link>
+          </li>
         </ul>
       </nav>
     </header>

@@ -14,18 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('reservations', function (Blueprint $table) {
-            $table->id();
-            $table->date('date_fin')->nullable();
-            $table->date('date_debut');
-            $table->integer('nbr_personne');
-            $table->integer('nbr_nuit');
-
-            $table->foreignId('id_chambre')->constrained('chambres')->onDelete('cascade');
-            $table->foreignId('id_utilisateur')->constrained('utilisateurs')->onDelete('cascade');
-            $table->foreignId('id_hotel')->constrained('hotels')->onDelete('cascade');
-            // $table->foreignId('id_activite')->constrained('activites')->onDelete('cascade');
-            $table->timestamps();
-        });
+        $table->id();
+        $table->date('date_debut');
+        $table->date('date_fin');
+        $table->unsignedBigInteger('id_chambre');
+        $table->unsignedBigInteger('id_hotel');
+        $table->unsignedBigInteger('id_utilisateur');
+        $table->integer('nbr_nuit');
+        $table->integer('nbr_personne');
+        $table->timestamps();
+    });
 
     }
 

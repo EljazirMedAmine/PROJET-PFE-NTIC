@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Payment() {
     const espace = "      ";
@@ -21,9 +22,9 @@ export default function Payment() {
                                         <tr>
                                             <th>
                                                 <div>
-                                                    <input type="radio" name="paie" value="paypal" onClick={() => { setSelectCarte2(true); setSelectCarte(false); }} /> 
+                                                    <input type="radio" name="paie" value="paypal" onClick={() => { setSelectCarte2(true); setSelectCarte(false); }} />
                                                     {espace}{espace}
-                                                    <img className="img-fluid" style={{ height: "30px" }} src="https://img.icons8.com/?size=100&id=GQp92C23u2N5&format=png&color=000000" alt="PayPal" /> 
+                                                    <img className="img-fluid" style={{ height: "30px" }} src="https://img.icons8.com/?size=100&id=GQp92C23u2N5&format=png&color=000000" alt="PayPal" />
                                                     {espace}PayPal
                                                 </div>
                                             </th>
@@ -33,9 +34,9 @@ export default function Payment() {
                                         <tr>
                                             <th>
                                                 <div>
-                                                    <input type="radio" name="paie" value="carte" onClick={() => { setSelectCarte(true); setSelectCarte2(false); }} /> 
+                                                    <input type="radio" name="paie" value="carte" onClick={() => { setSelectCarte(true); setSelectCarte2(false); }} />
                                                     {espace}
-                                                    <img className="img-fluid" style={{ height: "30px" }} src="https://img.icons8.com/?size=100&id=MabKibi4OdYM&format=png&color=000000" alt="Carte" /> 
+                                                    <img className="img-fluid" style={{ height: "30px" }} src="https://img.icons8.com/?size=100&id=MabKibi4OdYM&format=png&color=000000" alt="Carte" />
                                                     {espace}Carte
                                                     <p></p>
                                                 </div>
@@ -81,7 +82,7 @@ export default function Payment() {
                                             <div className="col-7">
                                                 <div className="form-outline">
                                                     <label className="form-label" htmlFor="formControlLgExpk">Date d'expiration <span style={{ color: "red" }}>*</span></label>
-                                                    <input type="password" id="formControlLgExpk" className="form-control form-control-l" placeholder="MM/YYYY" />
+                                                    <input type="date" id="formControlLgExpk" className="form-control form-control-l" placeholder="MM/YYYY" />
                                                 </div>
                                             </div>
                                             <div className="col-3">
@@ -92,7 +93,7 @@ export default function Payment() {
                                             </div>
                                         </div>
                                         <br />
-                                        <button className="btn btn-success btn-lg btn-block">Add card</button>
+                                        <Link to={'/'}><button className="btn btn-success btn-lg btn-block">Add card</button></Link>
                                     </div>
                                 )}
                                 <br /><br />
