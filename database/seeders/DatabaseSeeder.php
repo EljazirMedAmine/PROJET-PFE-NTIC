@@ -38,6 +38,8 @@ class DatabaseSeeder extends Seeder
             TypeActiviteSeeder::class,
             photoSeeder::class,
             ChambreSeeder::class,
+            PayementSeeder::class,
+            ReservationSeeder::class,
 
         ]);
     }
