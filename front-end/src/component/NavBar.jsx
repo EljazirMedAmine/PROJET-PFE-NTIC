@@ -31,18 +31,13 @@ const NavBar = () => {
             <Link to="/Spots">Spots</Link>
           </li>
           <li>
-            <Link to="/aboutus">About Us</Link>
+            <Link to="/About">About Us</Link>
           </li>
           <li>
             <Link to="/ContactUs">Contact Us</Link>
           </li>
         </ul>
       </nav>
-      <div className="signin-button">
-        <Link to={"/signin"}>
-          <button>Sign In</button>
-        </Link>
-      </div>
     </header>
   );
 };
