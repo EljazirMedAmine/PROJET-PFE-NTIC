@@ -23,7 +23,7 @@ return new class extends Migration
             $table->foreignId('id_chambre')->constrained('chambres')->onDelete('cascade');
             $table->foreignId('id_utilisateur')->constrained('utilisateurs')->onDelete('cascade');
             $table->foreignId('id_hotel')->constrained('hotels')->onDelete('cascade');
-            $table->foreignId('id_activite')->constrained('activites')->onDelete('cascade');
+            // $table->foreignId('id_activite')->constrained('activites')->onDelete('cascade');
             $table->timestamps();
         });
 
